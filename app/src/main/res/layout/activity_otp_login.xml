@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dip"
+    android:background="@drawable/loginscreen_background">
+
+
+
+    <LinearLayout
+
+       android:background="@drawable/b_round"
+        android:backgroundTint="#B2FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/textWrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="Hi"
+            android:textAllCaps="true"
+            android:textColor="@color/cyanbase"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/numberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="0dp"
+            android:hint="Enter Number"
+            android:text="+46123456789"
+            android:textAllCaps="true"
+            android:textColor="@color/cyanbase"
+            android:textSize="18sp"/>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Enter Code"
+            android:textAllCaps="false"
+            android:textColor="@color/cyanbase"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:cursorVisible="true"
+            android:textColorHint="@color/cyanbase"
+            android:id="@+id/inputCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/inputbox_new"
+            android:textColor="@color/cyanbase"
+            android:maxLength="6"
+            android:textCursorDrawable="@null"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:padding="10dp"
+
+            android:layout_marginBottom="10dp"
+            android:inputType="number"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/smsVerificationButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/cyanbase"
+                android:gravity="center"
+                android:onClick="onSubmitClicked"
+                android:padding="10dp"
+                android:text="Proceed"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/resend_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Resend Otp"
+            android:textColor="@color/cyanbase"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+

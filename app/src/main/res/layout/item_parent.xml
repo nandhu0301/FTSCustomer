@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:soundEffectsEnabled="false"
+    android:gravity="center_vertical">
+
+    <TextView
+       android:padding="10dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/text_brand"
+        android:textSize="18dp"
+        android:text="Text"
+        android:enabled="false"
+        android:textColor="@color/black"
+        android:layout_weight="1"
+        android:soundEffectsEnabled="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

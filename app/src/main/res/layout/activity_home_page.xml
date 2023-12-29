@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:scrolling_image_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".HomePageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/split"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text"
+                    android:backgroundTint="#4Dffffff"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:elevation="0dp"
+                        app:cardCornerRadius="5dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_margin="3dp"
+                            android:background="@color/white">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_margin="3dp"
+                                android:layout_toLeftOf="@+id/customericon">
+
+                                <ImageView
+                                    android:layout_width="200dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="-75dp"
+                                    android:src="@drawable/new_fts_logo" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/notify"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="horizontal">
+
+                                    <include layout="@layout/notification_layout" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/customericon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_toLeftOf="@+id/notify"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_profile_outline" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/searchview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center_vertical"
+                                android:backgroundTint="#CDC8C8"
+                                android:paddingLeft="5dp"
+                                android:src="@drawable/ic_baseline_search_24" />
+
+                            <EditText
+                                android:id="@+id/searchtext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:backgroundTint="#CDC8C8"
+                                android:hint="Search items"
+                                android:paddingLeft="5dp"
+                                android:paddingBottom="20dp"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ScrollView
+                        android:overScrollMode="never"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:keepScreenOn="false"
+                        android:scrollIndicators="none"
+                        android:scrollbarSize="0dp"
+                        android:scrollbarThumbVertical="@color/float_transparent"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+
+                                android:id="@+id/categoryRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:keepScreenOn="false"
+                                android:overScrollMode="never"
+                                android:nestedScrollingEnabled="true"
+                                android:scrollIndicators="none"
+                                android:scrollbarSize="0dp"
+                                android:scrollbarThumbVertical="@color/float_transparent"
+                                android:scrollbars="none" />
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/adcard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:elevation="0dp"
+                                app:cardCornerRadius="5dp">
+
+                                <!--  <AdapterViewFlipper
+                                      android:id="@+id/advflippers"
+                                      android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:visibility="visible"></AdapterViewFlipper>-->
+                                <androidx.viewpager.widget.ViewPager
+                                    android:id="@+id/viewpager"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="210dp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <com.make.dots.dotsindicator.DotsIndicator
+                                android:id="@+id/dotsIndicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="1dp"
+                                android:background="@drawable/b_round"
+                                android:backgroundTint="#E2FBF1"
+                                android:gravity="center_horizontal"
+                                app:dot_drawable="@drawable/selected_drawable"
+                                app:dot_drawable_unselected="@drawable/unselected_drawable"
+                                app:dot_gravity="center_horizontal" />
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="0dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp">
+
+                                        <ExpandableListView
+                                            android:soundEffectsEnabled="false"
+                                            android:layout_marginTop="0dp"
+                                            android:id="@+id/list_brands"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="13dp"
+                                            android:background="@color/white"
+                                            android:divider="@null"
+                                            android:dividerHeight="5dp"
+                                            android:groupIndicator="@null"
+                                            android:scrollbars="none" />
+
+                                    </androidx.cardview.widget.CardView>
+
+
+
+                                </LinearLayout>
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/reviewView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:visibility="invisible">
+
+                                    <LinearLayout
+                                        android:id="@+id/cardview"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/review"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="5dp"
+                                            android:paddingLeft="12dp"
+                                            android:text="Reviews"
+                                            android:textColor="@color/black"
+                                            android:textSize="15dp"
+                                            android:visibility="invisible" />
+
+                                        <ListView
+                                            android:id="@+id/reviewListView"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:divider="@null"
+                                            android:padding="5dp"
+                                            android:text="A convincing product description is a must when it comes to selling beauty products online. If you are a business owner selling makeup and beauty products, this article will provide you with the beauty product description examples that you need to drive your sales.A convincing product description is a must when it comes to selling beauty products online. If you are a business owner selling makeup and beauty products, this article will provide you with the beauty product description examples that you need to drive your sales."
+                                            android:textSize="14dp" />
+
+
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#D4C8F4"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <RelativeLayout
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="8dp"
+                                        android:layout_weight="1">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:src="@drawable/ic_freeshipping" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:text="Shipping all over India"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="8dp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:id="@+id/freeshippingText"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:text=""
+                                                    android:textSize="10dp" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="8dp"
+                                        android:layout_weight="1">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:src="@drawable/ic_mail" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/txtemail"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:text="www.favtechshop.com"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="8dp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:text="Have Query? mail us"
+                                                    android:textSize="10dp" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_margin="8dp"
+                                        android:gravity="center">
+
+                                        <LinearLayout
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:id="@+id/img"
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_toLeftOf="@+id/txt"
+                                                android:src="@drawable/ic_mobile" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/contactnumber"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_centerInParent="true"
+                                                    android:layout_gravity="left"
+                                                    android:gravity="center"
+                                                    android:text="9840800788"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="10dp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_below="@+id/txt"
+                                                    android:layout_centerInParent="true"
+                                                    android:layout_gravity="center"
+                                                    android:layout_toRightOf="@+id/img"
+                                                    android:gravity="center"
+                                                    android:text="Open 24/7-365 days"
+                                                    android:textSize="10dp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+
+                                    </RelativeLayout>
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="150dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/payment_banner" />
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="80dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:gravity="center|center_horizontal"
+                                        android:orientation="horizontal">
+
+
+                                        <ImageView
+                                            android:id="@+id/insta"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:layout_centerInParent="true"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_instagram" />
+
+                                        <ImageView
+                                            android:id="@+id/fb"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_fb" />
+                                        <ImageView
+                                            android:id="@+id/utube"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_utube" />
+
+
+                                    </LinearLayout>
+
+                                    <RelativeLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_centerInParent="true"
+                                            android:gravity="center_horizontal"
+                                            android:orientation="horizontal">
+
+
+
+                                            <TextView
+                                                android:id="@+id/privacypolicy"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:padding="5dp"
+                                                android:text="Privacy Policy |" />
+
+                                            <TextView
+                                                android:id="@+id/termsandcondition"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:padding="5dp"
+                                                android:text="Terms and Conditions |" />
+
+                                            <TextView
+                                                android:id="@+id/aboutustext"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:padding="5dp"
+                                                android:text="About Us" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/whatsappIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/drawerLayout"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_whatsappicon">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="100dp"
+            android:paddingBottom="200dp" />
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemTextColor="@drawable/item_selector"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

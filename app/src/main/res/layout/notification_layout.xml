@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_alignParentRight="true"
+    android:layout_gravity="right"
+    style="?attr/actionButtonStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:focusable="true">
+    <ImageView
+        android:id="@+id/wishlisticon"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_wishlist_outline_01"/>
+    <ImageView
+        android:id="@+id/carctIcon"
+        android:layout_marginRight="-12dp"
+        android:layout_marginTop="2dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_cart_outline"/>
+
+    <TextView
+        android:id="@+id/cart_badge"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="right|end|top"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginRight="-5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/red_badge"
+        android:gravity="center"
+        android:padding="3dp"
+        android:textColor="@android:color/white"
+        android:text="0"
+        android:textSize="10sp"/>
+
+</LinearLayout>

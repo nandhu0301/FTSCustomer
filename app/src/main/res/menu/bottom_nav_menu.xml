@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home_icon_selector"
+            android:title="Home" />
+
+
+
+        <item
+            android:id="@+id/order"
+            android:icon="@drawable/order_selector"
+            android:title="Orders" />
+
+
+        <item
+            android:id="@+id/cus_profile"
+            android:icon="@drawable/customer_profile_selector"
+            android:title="Customer" />
+
+    </group>
+
+</menu>

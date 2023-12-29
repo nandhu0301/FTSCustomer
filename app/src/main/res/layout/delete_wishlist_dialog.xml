@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:backgroundTint="#CCFFFFFF"
+    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:elevation="50dp"
+        app:cardCornerRadius="30dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:background="@drawable/b_round"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_centerInParent="true"
+                android:id="@+id/animation"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_repeatMode="restart"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:lottie_rawRes="@raw/alert"/>
+
+
+
+            <TextView
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:text="Are you sure?\n You want to remove Item from wishlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/cancel_item"
+                        android:textSize="16dp"
+                        android:text="Cancel"
+                        android:textColor="@color/white"
+                        android:layout_margin="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:backgroundTint="#C62828"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b_round"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/deleteItem"
+                        android:textSize="16dp"
+                        android:text="Remove !"
+                        android:textColor="@color/white"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="@color/cyanbase"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b_round"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

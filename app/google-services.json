@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "528370681599",
+    "firebase_url": "https://restaurantsdemo-d89c9-default-rtdb.firebaseio.com",
+    "project_id": "restaurantsdemo-d89c9",
+    "storage_bucket": "restaurantsdemo-d89c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528370681599:android:84fdf8e6daf0245a74aeca",
+        "android_client_info": {
+          "package_name": "com.smiligence.petclinic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwDnksEqUMoWjWse4VWn7shExAtr_WX2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528370681599:android:2109a6d5b83230c674aeca",
+        "android_client_info": {
+          "package_name": "com.smiligenceTestenv.techUser"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwDnksEqUMoWjWse4VWn7shExAtr_WX2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

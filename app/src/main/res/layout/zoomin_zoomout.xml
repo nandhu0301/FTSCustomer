@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/firstAddressLayout"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="400dp"
+        android:background="@color/quantum_bluegrey50"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/firstAddressLayoutRelative"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/zoomin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="60dp"
+                android:gravity="center"
+                android:background="@drawable/ic_baseline_zoom_in_24"
+                android:textSize="15dp"></Button>
+
+            <View
+                android:id="@+id/divider11"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/zoomout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/zoomin"
+                android:gravity="center"
+                android:background="@drawable/ic_baseline_zoom_out_24"
+                android:textStyle="bold"></Button>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

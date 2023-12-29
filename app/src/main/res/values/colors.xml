@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#15024C</color>
+    <color name="colorPrimaryDark">#15024C</color>
+    <color name="colorAccent">#15024C</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="cyanbasetrans">#F2FFEA</color>
+    <color name="cyanbase">#15024C</color>
+    <color name="float_transparent">#00000000</color>
+
+    <color name="rate_active_color">#FFFEBA39</color>
+    <color name="rate_normal_color">#FFA5A5A5</color>
+    <color name="redColor">#DC1B1B</color>
+    <color name="grey">#C3BDBD</color>
+
+    <color name="rate_button_color">#006cbc</color>
+
+    <color name="dot_dark_screen1">#865DFD</color>
+    <color name="dot_dark_screen2">#865DFD</color>
+    <color name="dot_dark_screen3">#865DFD</color>
+    <color name="dot_dark_screen4">#865DFD</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#191818</color>
+    <color name="dot_light_screen2">#191818</color>
+    <color name="dot_light_screen3">#191818</color>
+    <color name="dot_light_screen4">#191818</color>
+</resources>

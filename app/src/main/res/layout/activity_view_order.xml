@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewOrderActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/orderdetails_header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
+                android:text="Order Details"
+                android:textColor="@color/cyanbase"
+                android:textSize="18dp" />
+
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:overScrollMode="never"
+            android:id="@+id/scrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderdetails_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/generatePdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="right"
+                    android:textColor="@color/white"
+                    android:paddingLeft="15dp"
+                    android:drawableTint="@color/white"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/ic_baseline_insert_drive_file_24"
+                    android:gravity="right|center"
+                    android:textColorHint="@color/white"
+                    android:background="@color/colorPrimary"
+                    android:paddingRight="15dp"
+                    android:text="Generate Invoice">
+                </Button>
+
+
+
+                <include
+                    android:id="@+id/itemdetailslayoutheader"
+                    layout="@layout/item_details_header" />
+
+                <include
+                    android:id="@+id/itemdetailslayout"
+                    layout="@layout/item_listview_layout" />
+
+                <include
+                    android:id="@+id/payment_details"
+                    layout="@layout/payment_details" />
+
+                <include
+                    android:id="@+id/shipping_details_layout"
+                    layout="@layout/shipping_details_layout" />
+
+                <include
+                    android:id="@+id/cart_total_amount_layout"
+                    layout="@layout/cart_total_amount_layout" />
+                <include
+
+                    android:id="@+id/order_details_layout"
+                    layout="@layout/order_details_layout" />
+                <include
+                    android:id="@+id/taxAmountCalculationLayout"
+                    layout="@layout/tax_layout" />
+                <include
+                    android:id="@+id/tracking_details_layout"
+                    layout="@layout/tracking_details_layout" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemTextColor="@drawable/item_selector"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>

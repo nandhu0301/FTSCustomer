@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.Q42:AndroidScrollingImageView:1.3.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2d42938230efa4fb64a927bcaf9f4a41/jetified-AndroidScrollingImageView-1.3.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2d42938230efa4fb64a927bcaf9f4a41/jetified-AndroidScrollingImageView-1.3.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2d42938230efa4fb64a927bcaf9f4a41/jetified-AndroidScrollingImageView-1.3.4/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Q42/AndroidScrollingImageView/1.3.4/a209e506ad9bf30be7fa3a094b6957961765220b/AndroidScrollingImageView-1.3.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Q42/AndroidScrollingImageView/1.3.4/578efc884e7832519b1097f7e5a8e1d0bfc62ed2/AndroidScrollingImageView-1.3.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

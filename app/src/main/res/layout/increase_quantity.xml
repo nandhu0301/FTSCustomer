@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/addquantity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:background="@drawable/border">
+
+    <RelativeLayout
+
+
+        android:layout_width="70dp"
+        android:layout_height="20dp">
+
+        <ImageView
+            android:id="@+id/decqty"
+            android:layout_centerInParent="true"
+            android:layout_margin="2dp"
+            android:src="@drawable/minus"
+            android:layout_alignParentLeft="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/textqty"
+            android:hint="0"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/incqty"
+            android:layout_centerInParent="true"
+            android:layout_margin="2dp"
+            android:src="@drawable/add"
+            android:layout_alignParentRight="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

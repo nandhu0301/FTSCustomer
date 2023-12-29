@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cornerRadius="35dp"
+    android:gravity="center_vertical"
+    android:padding="0dp"
+    app:behavior_peekHeight="1dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_margin="5dp"
+            android:layout_gravity="left"
+            android:textSize="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort By" />
+
+        <RadioGroup
+            android:id="@+id/sort_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/sort_name"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort by Name"
+                android:textColor="@color/cyanbase"
+                android:theme="@style/RadioButtonStyle"
+                android:layout_margin="10dp"
+                android:textAppearance="@style/TabTextAppearance"
+                android:textSelectHandleRight="@anim/right2left" />
+
+            <RadioButton
+                android:id="@+id/sort_lowtohigh"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price-Low to high"
+                android:theme="@style/RadioButtonStyle"
+                android:textColor="@color/cyanbase"
+                android:layout_margin="10dp"
+                android:textAppearance="@style/TabTextAppearance"
+                android:textSelectHandleRight="@anim/right2left" />
+
+            <RadioButton
+                android:id="@+id/sort_hightolow"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price-High to Low"
+                android:textColor="@color/cyanbase"
+                android:layout_margin="10dp"
+                android:theme="@style/RadioButtonStyle"
+                android:textAppearance="@style/TabTextAppearance"
+                android:textSelectHandleRight="@anim/right2left" />
+
+            <RadioButton
+                android:id="@+id/sort_latest"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latest on Top"
+                android:textColor="@color/cyanbase"
+                android:layout_margin="10dp"
+                android:theme="@style/RadioButtonStyle"
+                android:textAppearance="@style/TabTextAppearance"
+                android:textSelectHandleRight="@anim/right2left" />
+        </RadioGroup>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

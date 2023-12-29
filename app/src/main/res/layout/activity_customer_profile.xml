@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerProfileActivity">
+
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/backto_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_outline_arrow"
+                    android:backgroundTint="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="My Profile"
+                    android:textColor="@color/cyanbase"
+                    android:textSize="18dp" />
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/login"
+                            android:layout_width="150dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="15dp"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="Login/Register"
+                            android:textColor="@color/cyanbase"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/logout"
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginTop="13dp"
+                            android:gravity="right"
+                            android:src="@drawable/ic_logout"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animation"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_centerInParent="true"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="false"
+                        app:lottie_rawRes="@raw/customerprofile"
+                        app:lottie_repeatMode="restart" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/customername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM "
+                            android:drawablePadding="10dp"
+                            android:hint="Name"
+                            android:maxLength="20" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/customeremail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="1234567890qwertyuiopasdfghjklzxcvbnm@."
+                            android:drawablePadding="10dp"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/customernumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:hint="Phone Number"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/updateProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:background="@drawable/b_round"
+                        android:backgroundTint="@color/cyanbase"
+
+                        android:text="Update Profile"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+
+                    android:backgroundTint="#4Dffffff"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="0dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="5dp">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="4dp"
+                                                android:paddingLeft="0dp"
+                                                android:text="Contact Support"
+                                                android:textColor="@color/black"
+                                                android:textSize="15dp" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="3dp"
+                                                android:orientation="horizontal"
+                                                android:paddingLeft="5dp">
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+
+                                                    <ImageView
+                                                        android:id="@+id/img"
+                                                        android:layout_width="20dp"
+                                                        android:layout_height="20dp"
+                                                        android:src="@drawable/ic_landlineicon" />
+
+                                                    <TextView
+                                                        android:id="@+id/landlinetext"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_alignParentLeft="true"
+                                                        android:layout_marginLeft="29dp"
+                                                        android:layout_toRightOf="@+id/img"
+                                                        android:text="Landline"
+                                                        android:textColor="@color/black"
+                                                        android:textSize="14dp" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_alignParentRight="true"
+                                                        android:autoLink="phone"
+                                                        android:paddingLeft="150dp"
+                                                        android:text="@string/landline"
+                                                        android:textColor="@color/cyanbase"
+                                                        android:textColorLink="@color/cyanbase"
+                                                        android:textSize="14dp" />
+
+                                                </RelativeLayout>
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="3dp"
+                                                android:orientation="horizontal"
+                                                android:paddingLeft="5dp">
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+
+                                                    <ImageView
+                                                        android:id="@+id/img1"
+                                                        android:layout_width="20dp"
+                                                        android:layout_height="20dp"
+                                                        android:src="@drawable/ic_whatsappicon" />
+
+                                                    <TextView
+                                                        android:id="@+id/watsapptext"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_alignParentLeft="true"
+                                                        android:layout_marginLeft="29dp"
+                                                        android:text="Whats App"
+                                                        android:textColor="@color/black"
+                                                        android:textSize="14dp" />
+
+                                                    <TextView
+                                                        android:id="@+id/whatsapptext"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_alignParentRight="true"
+                                                        android:paddingLeft="150dp"
+                                                        android:text="@string/whatsapp"
+                                                        android:textColor="@color/cyanbase"
+                                                        android:textSize="14dp" />
+
+                                                </RelativeLayout>
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="3dp"
+                                                android:orientation="horizontal"
+                                                android:paddingLeft="5dp">
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+
+                                                    <ImageView
+
+                                                        android:id="@+id/img2"
+                                                        android:layout_width="17dp"
+                                                        android:layout_height="17dp"
+                                                        android:src="@drawable/ic_websiteicon" />
+
+                                                    <TextView
+                                                        android:id="@+id/websitetext"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_alignParentLeft="true"
+                                                        android:layout_marginLeft="29dp"
+                                                        android:text="Website"
+                                                        android:textColor="@color/black"
+                                                        android:textSize="14dp" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_alignParentRight="true"
+                                                        android:autoLink="web"
+                                                        android:paddingLeft="150dp"
+                                                        android:text="@string/website"
+                                                        android:textColor="@color/cyanbase"
+                                                        android:textColorLink="@color/cyanbase"
+                                                        android:textSize="12dp" />
+
+                                                </RelativeLayout>
+
+                                            </LinearLayout>
+
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:backgroundTint="@color/cyanbase">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center_horizontal"
+                                                    android:layout_margin="5dp"
+                                                    android:text="Powered by Smiligence 1.11"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="14dp" />
+                                            </androidx.cardview.widget.CardView>
+
+                                        </LinearLayout>
+
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
